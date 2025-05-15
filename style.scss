@@ -30,24 +30,27 @@ $transition: all 0.25s ease-in-out;
   justify-content: center;
   width: 100wv;
   height: 100vh;
-  background-color: $main-bg;
 }
 
 .searchEndProfile{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  max-width: 700px;
+  justify-content: space-around;
+  gap: 2rem;
+  max-width: 600px;
   width: 100%;
-  height: 500px;
+  max-height: 600px;
+  height: 100%;
   background-color: $gray-text;
+  padding: 2rem 0 2rem 0;
+  border-radius: $radius;
   .search{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 60%;
+    width: 80%;
     gap: 0;
     input{
       outline: none;
@@ -69,6 +72,77 @@ $transition: all 0.25s ease-in-out;
       background-color: $main-hover;
       border-color: $main-hover;
     }
+  }
+
+  .profileCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    width: 90%;
+    height: 100%;
+    .tab-buttons{
+      display: flex;
+      flex-direction: row;
+      align-items: start;
+      width: 100%;
+      gap: 0;
+      button {
+        background-color: $main;
+        color: $gray-line;
+        padding: 8px 16px;
+        border: 2px solid $gray-dark;
+        width: 20%;
+        border-radius: $radius $radius 0 0;
+        font-size: 14px;
+        cursor: pointer;
+        transition: $transition;
+
+        &.active {
+          background-color: $gray-soft;
+          border: 2px solid $gray-soft;
+          color: $gray-dark;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    .tab-content{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      .profile_info{
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        width: 100%;
+        height: 100%;
+        border-radius: 0 $radius $radius $radius;
+        padding: 1.3rem;
+        z-index: 100;
+        transition: $transition;
+        background-color: $gray-soft;
+      }
+      .profile_chart{
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 1.3rem;
+        background-color: $gray-soft;
+        border-radius: 0 $radius $radius $radius;
+        z-index: 0;
+        transition: $transition;
+      }
+    }
+
   }
 }
 

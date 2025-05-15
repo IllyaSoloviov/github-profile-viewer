@@ -21,7 +21,6 @@
           justify-content: center;
   width: 100wv;
   height: 100vh;
-  background-color: #eef6fb;
 }
 
 .searchEndProfile {
@@ -32,16 +31,19 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 700px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 2rem;
+  max-width: 600px;
   width: 100%;
-  height: 500px;
+  max-height: 600px;
+  height: 100%;
   background-color: #7a869a;
+  padding: 2rem 0 2rem 0;
+  border-radius: 10px;
 }
 .searchEndProfile .search {
   display: -webkit-box;
@@ -57,7 +59,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 60%;
+  width: 80%;
   gap: 0;
 }
 .searchEndProfile .search input {
@@ -80,5 +82,95 @@
 .searchEndProfile .search .searchButton:hover {
   background-color: #265ecf;
   border-color: #265ecf;
+}
+.searchEndProfile .profileCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  width: 90%;
+  height: 100%;
+}
+.searchEndProfile .profileCard .tab-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  width: 100%;
+  gap: 0;
+}
+.searchEndProfile .profileCard .tab-buttons button {
+  background-color: #3a86ff;
+  color: #dcdfe4;
+  padding: 8px 16px;
+  border: 2px solid #3e4c59;
+  width: 20%;
+  border-radius: 10px 10px 0 0;
+  font-size: 14px;
+  cursor: pointer;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+.searchEndProfile .profileCard .tab-buttons button.active {
+  background-color: #f9f9f9;
+  border: 2px solid #f9f9f9;
+  color: #3e4c59;
+}
+.searchEndProfile .profileCard .tab-buttons button:focus {
+  outline: none;
+}
+.searchEndProfile .profileCard .tab-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.searchEndProfile .profileCard .tab-content .profile_info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0.5rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 10px 10px 10px;
+  padding: 1.3rem;
+  z-index: 100;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  background-color: #f9f9f9;
+}
+.searchEndProfile .profileCard .tab-content .profile_chart {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1.3rem;
+  background-color: #f9f9f9;
+  border-radius: 0 10px 10px 10px;
+  z-index: 0;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 /*# sourceMappingURL=style.css.map */
