@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 $main-bg: #eef6fb;
 $main: #3a86ff;
 $main-hover: #265ecf;
@@ -15,5 +21,54 @@ $accent-light: #cde3ff;
 $shadow-color: rgba(0, 0, 0, 0.05);
 
 $radius: 10px;
-$transition: 0.25s ease-in-out;
+$transition: all 0.25s ease-in-out;
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100wv;
+  height: 100vh;
+  background-color: $main-bg;
+}
+
+.searchEndProfile{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 700px;
+  width: 100%;
+  height: 500px;
+  background-color: $gray-text;
+  .search{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    gap: 0;
+    input{
+      outline: none;
+      border: 2px solid $main;
+      border-radius:$radius 0 0 $radius;
+      padding: 8px 8px 8px 20px;
+      width: 100%;
+    }
+    .searchButton{
+      border: 2px solid $main;
+      background-color:$main;
+      border-radius: 0 $radius $radius 0;
+      padding: 0 8px 0 8px;
+      height: 100%;
+      cursor: pointer;
+      transition: $transition;
+    }
+    .searchButton:hover{
+      background-color: $main-hover;
+      border-color: $main-hover;
+    }
+  }
+}
 
