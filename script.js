@@ -26,3 +26,22 @@ document.addEventListener("DOMContentLoaded", function() {
 })
 
 
+const searchBtn = document.getElementById("searchButton");
+let profile_info = document.getElementById("profile_info");
+
+searchBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+
+    let userLogin = document.getElementById("searchInput").value;
+    console.log(userLogin);
+    fetch(`https://api.github.com/users/${userLogin}`)
+        .then(response => {
+           return  response.json()
+        })
+        .then((json) => {
+            console.log(json);
+        profile_info.innerHTML = `
+        <img src="${json.avatar_url}" alt="avatar">
+        `
+        })
+})

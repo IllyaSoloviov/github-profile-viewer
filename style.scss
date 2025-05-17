@@ -50,7 +50,7 @@ $transition: all 0.25s ease-in-out;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 80%;
+    width: 90%;
     gap: 0;
     input{
       outline: none;
@@ -142,7 +142,6 @@ $transition: all 0.25s ease-in-out;
         transition: $transition;
       }
     }
-
   }
 }
 
