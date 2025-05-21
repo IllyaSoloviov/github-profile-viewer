@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script>
 </head>
 <style>
 
@@ -15,19 +16,33 @@
 <div class="wrapper">
     <div class="searchEndProfile">
         <div class="search">
-            <input type="text" id="searchInput" placeholder="SEARCH PROFILE"/>
+            <input type="text" id="searchInput" placeholder="SEARCH PROFILE" value="KaplunMaxym"/>
             <button type="submit" id="searchButton" class="searchButton">&#128269;</button>
         </div>
         <div class="profileCard">
             <div class="tab-buttons">
-                <button id="profile" class="active">Профиль</button>
+                <button id="profile" class="active">Profile</button>
                 <button id="chartPage">Chart</button>
             </div>
             <div class="tab-content">
-                <div id="profile_info" class="profile_info">
-
+                <div id="profile_info" class="profile_info card-profile">
+                    <div class="skeleton-grid1"></div>
+                    <div class="skeleton-grid2"></div>
+                    <div class="skeleton-grid3"></div>
+                    <div class="skeleton-grid4"></div>
+                    <div class="skeleton-grid5"></div>
+                    <div class="skeleton-grid6"></div>
+                    <div class="skeleton-grid7"></div>
+                    <div class="skeleton-grid8"></div>
                 </div>
-                <div id="profile_chart" class="profile_chart">3211231222222</div>
+                <div id="profile_chart" class="profile_chart">
+                    <div class="week-option">
+                        <input id="weak1" type="date" value="2025-04-01">
+                        <input id="weak2" type="date" value="2025-04-07">
+                        <button id="weakButton" class="weakButton">&#8635;</button>
+                    </div>
+                    <canvas id="myChart" height="350px" width="470px"></canvas>
+                </div>
             </div>
 
         </div>
